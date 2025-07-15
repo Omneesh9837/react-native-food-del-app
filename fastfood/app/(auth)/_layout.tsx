@@ -2,6 +2,9 @@ import {Text,View,KeyboardAvoidingView,Platform,Dimensions,ScrollView,ImageBackg
 import React from 'react'
 import {SafeAreaView} from "react-native-safe-area-context"
 import {Slot} from "expo-router"
+import CustomButton from '@/components/CustomButton'
+import CustomInput from '@/components/CustomInput'
+
 export default function _Layout(){
     return(
         <KeyboardAvoidingView behavior={Platform.OS==='ios'?'padding':'height'}>
@@ -11,6 +14,8 @@ export default function _Layout(){
                 <Image source={images.logo} className="self-center size-48 absolute style={{ bottom: -64 }} />
 
                 </View>
+                <CustomInput/>
+                <CustomButton/>
             </ScrollView>
            
             <Slot/>
